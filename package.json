@@ -1,11 +1,20 @@
 {
   "license": "MIT",
   "scripts": {
-    "test": "ts-node src/index.ts"
+    "setup": "ts-node -r dotenv-override-true/config src/setup-webhook.ts",
+    "serve": "ts-node -r dotenv-override-true/config src/webhook-handler.ts",
+    "proxy": "ngrok http 3000"
+  },
+  "dependencies": {
+    "@rc-ex/core": "^0.7.2",
+    "express": "^4.17.1"
   },
   "devDependencies": {
+    "@types/express": "^4.17.11",
     "@types/node": "^14.14.37",
+    "dotenv-override-true": "^6.2.2",
     "gts": "^3.1.0",
+    "ngrok": "^4.0.0",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3",
     "yarn-upgrade-all": "^0.5.4"
