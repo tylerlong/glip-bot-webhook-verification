@@ -3,11 +3,14 @@
   "scripts": {
     "setup": "ts-node -r dotenv-override-true/config src/setup-webhook.ts",
     "serve": "ts-node -r dotenv-override-true/config src/webhook-handler.ts",
-    "proxy": "ngrok http 3000"
+    "proxy": "ngrok http 3000",
+    "pubnub": "ts-node -r dotenv-override-true/config src/setup-pubnub.ts"
   },
   "dependencies": {
     "@rc-ex/core": "^0.7.2",
-    "express": "^4.17.1"
+    "@rc-ex/pubnub": "^0.7.4",
+    "express": "^4.17.1",
+    "wait-for-async": "^0.5.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
