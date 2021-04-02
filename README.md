@@ -18,3 +18,12 @@ Copy and paste ngrok server URL to `.env` file.
 `yarn setup` set setup bot WebHook.
 
 Test the WebHook.
+
+
+## Run PubNub
+
+Just to compare the messages with WebHook:
+
+```
+yarn pubnub
+```
