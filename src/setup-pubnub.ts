@@ -14,7 +14,7 @@ const pubNubExtension = new PubNubExtension();
 (async () => {
   console.log('setup PubNub');
   await rc.installExtension(pubNubExtension);
-  const subscription = await pubNubExtension.subscribe(
+  await pubNubExtension.subscribe(
     [
       '/restapi/v1.0/glip/posts',
       '/restapi/v1.0/glip/groups',
@@ -26,7 +26,6 @@ const pubNubExtension = new PubNubExtension();
       console.log('*** PubNub message end ***');
     }
   );
-  console.log(JSON.stringify(subscription, null, 2));
   console.log('done');
 
   await waitFor({interval: 999999999});
