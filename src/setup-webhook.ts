@@ -19,7 +19,7 @@ const rc = new RingCentral({
         '/restapi/v1.0/glip/groups',
         '/restapi/v1.0/account/~/extension/~',
       ],
-      expiresIn: 36000000, // 10 hours
+      expiresIn: 36000, // 10 hours
       deliveryMode: {
         transportType: 'WebHook',
         address: process.env.RINGCENTRAL_CHATBOT_SERVER,
